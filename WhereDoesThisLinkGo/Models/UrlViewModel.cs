@@ -9,7 +9,6 @@ namespace WhereDoesThisLinkGo.Models
     {
         public string ShortenedUri { get; set; }
         public Uri ExpandedUri { get; set; }
-        public string Result { get; set; }
         public string ErrorMessage { get; set; }
     }
 }

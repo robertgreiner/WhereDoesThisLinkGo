@@ -4,6 +4,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+
+    <meta name="description" content="URL Expander">
+    <meta name="author" content="Robert Greiner">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Dosis:200,400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
     <link href="~/Content/Site.css" rel="stylesheet" />
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -15,11 +27,36 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-    </script>
+    </script>
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="header">
+        <div class="container">
+            <div class="eight columns">
+            </div>
+        </div>
+    </div>
+    <div class="main_container">
+        <div class="container">
+            <div class="sixteen columns">
+                <div class="message">
+                    <h1>Where does this link go?
+                    </h1>
+                    <h4>Enter a shortened URL to see where it will take you.
+                    </h4>
+                </div>
+            </div>
+            <div class="sixteen columns">
+                <div class="form_input">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div style="width: 100%; text-align: center; color: #999999;">
+        Created by <a href="http://robertgreiner.com">Robert Greiner</a><br />
+        Source available on <a href="https://github.com/robertgreiner/WhereDoesThisLinkGo">Github</a>
     </div>
 </body>
 </html>

@@ -20,7 +20,7 @@ namespace WhereDoesThisLinkGo.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var model = new UrlViewModel {Result = string.Empty, ErrorMessage = string.Empty};
+            var model = new UrlViewModel {ErrorMessage = string.Empty};
             return View(model);
         }
 
@@ -31,13 +31,9 @@ namespace WhereDoesThisLinkGo.Controllers
 
             if (model.ExpandedUri == null)
             {
-                model.ErrorMessage = "Error!";
+                model.ErrorMessage = "Error: Please enter a valid URL.";
             }
-            else
-            {
-                model.Result = model.ExpandedUri.AbsoluteUri;
-            }
-
+           
             return View(model);
         }
     }

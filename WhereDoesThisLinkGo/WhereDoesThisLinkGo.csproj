@@ -120,6 +120,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Images\button_01.png" />
+    <Content Include="Content\Images\button_02.png" />
+    <Content Include="Content\Images\button_03.png" />
+    <Content Include="Content\Images\button_background.png" />
+    <Content Include="Content\Images\button_divider.png" />
+    <Content Include="Content\Images\button_submit.png" />
+    <Content Include="Content\Images\content_background.png" />
+    <Content Include="Content\Images\header_background.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
