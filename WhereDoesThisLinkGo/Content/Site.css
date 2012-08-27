@@ -692,12 +692,9 @@ body
 
 .main_container .form_input .button_input span
 {
-    font-family: Tahoma;
-    font-size: 11px;
-    color: white;
-    text-transform: uppercase;
+    color: #ffffff;
+    font: 18px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
-    letter-spacing: 2px;
 }
 
 
