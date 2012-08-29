@@ -16,7 +16,7 @@ Code
     //using System.Net
     var request = (HttpWebRequest)WebRequest.Create(url);
     var response = (HttpWebResponse)request.GetResponse();
-                return response.ResponseUri;    
+    return response.ResponseUri;    
 
 Copyright
 ---------
