@@ -1,0 +1,27 @@
+﻿﻿@model WhereDoesThisLinkGo.Models.UrlViewModel
+
+@{
+    ViewBag.Title = "Where Does This Link Go?";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div>
+        <h4 class="error">@Model.ErrorMessage</h4>
+    </div>
+}
+else if (Model.ExpandedUri != null)
+{
+    <div>
+        <h4><a href="@Model.ShortenedUri">@Model.ShortenedUri</a> expands to <a href="@Model.ExpandedUri.AbsoluteUri">@Model.ExpandedUri.AbsoluteUri</a></h4>
+    </div>
+}
+
+@using (Html.BeginForm("Index", "Url"))
+{
+    @Html.TextBoxFor(m => m.ShortenedUri, new { @class = "url_input", @placeholder = "Enter a shortened URL" })
+    <button class="button_input">
+        <span>Expand</span>
+    </button>
+}
